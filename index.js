@@ -45,11 +45,11 @@ handleDisconnect();
 
 // In-memory storage for votes (for simplicity)
 let votes = {
-    "Anick. ": 0,
-    "Umurungi. ": 0,
-    "Kamanzi. ": 0,
-    "Bosco. ": 0,
-    "Ella. ": 0
+    "Benitha ": 0,
+    "Ishimwe ": 0,
+    "Flora ": 0,
+    "Claude ": 0,
+    "Vivi ": 0
 };
 
 // In-memory storage for user data (for simplicity)
@@ -96,8 +96,8 @@ app.post('/ussd', (req, res) => {
             } else {
                 // Voting option selected
                 response = userLanguages[phoneNumber] === 'en' ? 
-                    `CON Select a candidate:\n1. Anick\n2. Umurungi\n3. Kamanzi\n4. Bosco\n5. Ella` : 
-                    `CON Hitamo umukandida:\n1. Anick\n2. Umurungi\n3. Kamanzi\n4. Bosco\n5. Ella`;
+                    `CON Select a candidate:\n1. Benitha\n2. Ishimwe\n3. Flora\n4. Claude\n5. Vivi` : 
+                    `CON Hitamo umukandida:\n1. Benitha\n2. Ishimwe\n3. Flora\n4. Claude\n5. Vivi`;
             }
         } else if (userInput[2] === '2') {
             // View votes option selected
